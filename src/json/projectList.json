@@ -1,0 +1,8 @@
+[
+    {
+        "id": 10,
+        "name": "영화 소개 사이트",
+        "type": ["js", "jQuery"],
+        "photo":"thumbnail_movie(2).jpg"
+    }
+]

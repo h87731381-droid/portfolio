@@ -1,0 +1,518 @@
+/* 전페이지 큰제목 스타일 */
+.title {
+    font-size: 40px;
+    width: 260px;
+    border-bottom: 1px solid #666666;
+    padding: 70px 0 0 0;
+}
+
+
+/* Home */
+main {
+    width: 100%;
+    position: relative;
+
+    .H_title {
+        display: flex;
+        flex-direction: column;
+        height: 750px;
+        justify-content: center;
+        gap: 105px;
+
+        h1 {
+            padding: 0 0 20px 0;
+            line-height: 0;
+            color: #9DFFFA;
+            font-size: 50px;
+        }
+
+        .H_titleMain {
+            font-size: 100px;
+            font-weight: 600;
+            line-height: 1.3;
+
+            .H_name {
+                border-top: 1px solid white;
+                width: 900px;
+            }
+        }
+
+        .H_link {
+            display: flex;
+            gap: 105px;
+            font-size: 36px;
+            margin: 0;
+
+            b {
+                color: #9DFFFA;
+            }
+        }
+    }
+
+    .H_imgBox {
+        padding: 100px 100px 0 0;
+        position: absolute;
+        top: 0;
+        right: 0;
+        margin: 0;
+
+        img {
+            width: 455px;
+            height: 645px;
+        }
+
+        .H_note {
+            position: absolute;
+            top: 43%;
+            left: 130px;
+            width: 200px;
+            text-align: center;
+            font-size: 17px;
+            font-weight: 500;
+        }
+    }
+}
+
+
+/* About */
+.A_all {
+    width: 100%;
+
+    /* 소제목 전역 스타일 */
+    .mission_profile {
+        font-size: 25px;
+        width: 785px;
+        border-bottom: 1px solid #9DFFFA;
+        padding: 10px;
+    }
+
+    /* 내용 전역 스타일 */
+    .mission_note {
+        font-size: 17px;
+        padding: 0 10px;
+        margin: 0;
+        line-height: 0.5;
+        color: #cfcfcf;
+    }
+
+    .A_contentsBox {
+        padding: 40px 0 0 0;
+
+        .A_textAll {
+            border: 1px solid #353535;
+            backdrop-filter: blur(5px);
+            box-shadow: 0 0 10px rgba(0, 242, 255, 0.5), inset 0 0 5px rgba(0, 242, 255, 0.2);
+            border-radius: 50px;
+            padding: 30px;
+            width: 850px;
+
+            .A_data {
+                display: grid;
+                gap: 50px;
+
+                .A_mission {
+                    display: grid;
+                    gap: 20px;
+                }
+
+                .A_profile {
+                    display: grid;
+                    gap: 20px;
+
+                    .A_profileAll {
+                        display: grid;
+                        gap: 20px;
+                    }
+
+                    .A_profile_note {
+                        display: flex;
+                        align-items: center;
+                        gap: 10px;
+                        padding: 0 10px;
+                        line-height: 0;
+
+                        .profileIcon {
+                            width: 30px;
+                            height: 30px;
+                        }
+                    }
+                }
+            }
+        }
+
+    }
+}
+
+
+/* tech orbot (skills) */
+.S_section {
+    padding: 50px 0 0 0;
+
+    .s_boxAll {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        gap: 50px;
+        padding: 30px;
+
+        /* border: 1px solid #353535;
+        backdrop-filter: blur(5px);
+        box-shadow: 0 0 10px rgba(0, 242, 255, 0.5), inset 0 0 5px rgba(0, 242, 255, 0.2);
+        border-radius: 50px;
+     */
+        .s_box {
+            display: flex;
+            flex-direction: column;
+            gap: 50px;
+
+            .S_id {
+                width: 74px;
+                height: 74px;
+                text-align: center;
+                display: grid;
+                align-items: center;
+                flex-shrink: 0;
+                /* flex 고유 사이즈 제어기능 제거 */
+            }
+
+            .S_skill_note {
+                width: 524px;
+                display: flex;
+                align-items: center;
+                gap: 20px;
+                position: relative;
+
+            }
+        }
+    }
+}
+
+
+
+/* project */
+.P_list {
+    min-height: 545px;
+    width: 100%;
+    position: relative;
+
+    .P_thumbList {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 40px;
+        justify-content: center;
+        width: 1110px;
+        margin: 0 auto;
+        padding: 30px 0 0 0;
+
+        .P_listOne {
+            width: 336px;
+            height: 255px;
+            position: relative;
+
+            &:hover .P_hover {
+                opacity: 1;
+            }
+
+            .P_thumbnail {
+                width: 100%;
+                height: 100%;
+                display: block;
+                border: 1px solid #3f3f3f;
+            }
+
+            .P_hover {
+                height: 100%;
+                width: 100%;
+                background-color: #000000c9;
+                border: 1px solid #3f3f3f;
+                position: absolute;
+                top: 0%;
+                left: 0%;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                text-align: center;
+                opacity: 0;
+                transition: 0.5s;
+
+                .P_data {
+                    display: grid;
+                    gap: 40px;
+                    font-size: 19px;
+
+                    .P_name {
+                        font-weight: 600;
+                    }
+
+                    .P_link {
+                        padding: 10px 50px;
+                        background-color: #160A38;
+                        color: #9DFFFA;
+                        text-decoration: none;
+                        border: 1px solid #3f3f3f;
+                    }
+
+                    .P_link:hover {
+                        box-shadow: 2px 4px 0 #3f3f3f;
+                        transform: translateY(-1px);
+                    }
+                }
+            }
+        }
+    }
+
+}
+
+
+/* popup */
+.popup {
+    background-color: rgba(0, 0, 0, 0.637);
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    .popup_back {
+
+        b {
+            font-size: 20px;
+        }
+
+        p {
+            padding: 5px 0 0 0;
+            line-height: 1.8;
+            color: rgb(177, 177, 177);
+        }
+
+        background-color: #252525;
+        width: 1100px;
+        height: 800px;
+        padding: 60px;
+        border-radius: 50px;
+        border: 1px solid #3f3f3f;
+
+        .ppp_title {
+            padding: 0 0 30px 0;
+
+            .ppp_title_github {
+                display: flex;
+                align-items: center;
+                padding: 0 0 30px 0;
+                gap: 10px;
+            }
+        }
+
+        .ppp_data {
+
+
+            .ppp_note {
+                display: flex;
+                gap: 40px;
+                padding: 0 0 50px 0;
+
+                .ppp_tool {
+
+                    .tool {
+                        border: 1px solid #666666;
+                        background-color: black;
+                        padding: 0 10px;
+                        border-radius: 10px;
+                        color: #9DFFFA;
+                        font-size: 14px;
+                    }
+
+                    .ppp_toolname {
+                        display: flex;
+                        gap: 5px;
+                        padding: 10px 0 0 0;
+                    }
+                }
+
+                .ppp_url {
+
+                    .ppp_link {
+                        display: flex;
+                        align-items: center;
+                        gap: 5px;
+                    }
+                }
+            }
+
+            .ppp_text {
+                padding: 0 0 30px 0;
+            }
+        }
+
+        .X_back {
+            position: relative;
+
+            .X {
+                position: absolute;
+                top: 0;
+                right: 0;
+                margin: 0;
+                cursor: pointer;
+            }
+        }
+    }
+}
+
+
+/* guest book (book) */
+.book_section {
+    padding: 60px 0 0 0;
+    width: 100%;
+    min-height: 100vh;
+    margin: 0 auto;
+
+    p,
+    button,
+    textarea {
+        font-size: 17px;
+    }
+
+    .guestBook {
+
+        .book_guest {
+
+            .formtext {
+                display: flex;
+                justify-content: space-between;
+
+                .book_text {
+                    width: 1425px;
+                    height: 70px;
+                    resize: none;
+                    background-color: black;
+                    border: 1px solid #3f3f3f;
+                    border-radius: 5px;
+                    color: white;
+                    padding: 10px;
+                }
+
+                textarea:focus {
+                    outline: none;
+                    border: 1px solid #9DFFFA;
+                    box-shadow: 0 0 5px #9DFFFA;
+                }
+
+                button {
+                    padding: 5px 90px;
+                    background-color: #252525;
+                    border: 1px solid #3f3f3f;
+                    border-radius: 5px;
+                    color: white;
+                }
+
+                button:hover {
+                    box-shadow: 2px 4px 0 #3f3f3f;
+                    transform: translateY(-2px);
+                }
+            }
+        }
+
+
+        .book_list {
+            display: grid;
+            gap: 20px;
+            padding: 20px 0 0 0;
+
+            .book_note {
+                display: flex;
+                justify-content: space-between;
+                gap: 50px;
+                padding: 10px;
+                border-bottom: 1px dashed #505050;
+
+                .book_txt {
+                    width: 1400px;
+                    height: 60px;
+                    display: flex;
+                    align-items: center;
+                    overflow: hidden;
+                }
+
+                .book_detail {
+                    display: flex;
+                    gap: 10px;
+                    padding: 20px 0 0 0;
+                }
+            }
+        }
+
+    }
+
+    .book_page {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        padding: 50px 0 0 0;
+        gap: 50px;
+
+        p {
+            font-size: 25px;
+        }
+
+        ;
+
+        .arrow_left,
+        .arrow_right {
+            cursor: pointer;
+        }
+    }
+}
+
+
+
+
+
+/* ──────────────────── 반응형 ────────────────────── */
+
+/* 1669px 이하 */
+@media (max-width:1669px) {
+
+    /* home, about */
+    main .H_imgBox {
+        right: -55px;
+    }
+
+    /* tech orbit */
+    .S_section {
+        padding: 50px 0 0 0;
+
+        .s_boxAll {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 50px;
+            padding: 30px;
+
+            .s_box {
+                display: flex;
+                flex-direction: column;
+                gap: 50px;
+
+                .S_id {
+                    width: 74px;
+                    height: 74px;
+                    text-align: center;
+                    display: grid;
+                    align-items: center;
+                    flex-shrink: 0;
+                    /* flex 고유 사이즈 제어기능 제거 */
+                }
+
+                .S_skill_note {
+                    width: 400px;
+                    display: flex;
+                    align-items: center;
+                    gap: 20px;
+                    position: relative;
+
+                }
+            }
+        }
+    }
+}

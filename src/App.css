@@ -1,38 +1,143 @@
-.App {
-  text-align: center;
+* {
+  box-sizing: border-box;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+body,
+html {
+  margin: 0;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+ul,
+li {
+  list-style-type: none;
+  margin: 0;
+  padding: 0
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
+figure,
+p,
+h1,
+h2,
+h3 {
+  margin: 0
+}
+
+a {
+  text-decoration: none;
   color: white;
 }
 
-.App-link {
-  color: #61dafb;
+a,
+button {
+  cursor: pointer;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
+html {
+  background: linear-gradient(to bottom, #160A38, black);
+  color: white;
+  padding: 35px 90px;
+  min-height: 100vh;
+  overflow: hidden;
+}
+
+header {
+  display: flex;
+  justify-content: space-between;
+  font-size: 20px;
+  font-weight: 500;
+}
+
+.menu {
+  display: flex;
+  gap: 150px;
+}
+
+.menu a {
+  color: rgba(255, 255, 255, 0.70);
+}
+
+.menu a.active {
+  color: white;
+  border-bottom: 1px solid white;
+}
+
+
+
+/* ____________ tech orbit - 궤도 ______________ */
+
+/* :root{
+    --progress:70;
+} */
+
+svg {
+  position: absolute;
+  top: -1px;
+  left: -4px;
+  margin: 0px;
+  transform: rotate(-90deg);
+}
+
+svg circle:nth-of-type(1) {
+  stroke-dasharray: calc(74px * 3.14);
+  stroke-dashoffset: calc(74px * 3.14);
+  stroke-width: 3px;
+  filter: blur(2px);
+
+  animation: line 1s linear forwards;
+}
+
+svg circle:nth-of-type(2) {
+  stroke-dasharray: calc(74px * 3.14);
+  stroke-dashoffset: calc(74px * 3.14);
+
+  animation: line 1s linear forwards;
+}
+
+svg circle:nth-of-type(3) {
+
+  transform-origin: 40px 40px;
+  animation: orbit 1s linear forwards;
+}
+
+@keyframes orbit {
+  0% {
+    transform: rotate(0deg) translateX(37px);
   }
-  to {
-    transform: rotate(360deg);
+
+  100% {
+    transform: rotate(calc(var(--progress) * 3.6deg)) translateX(37px);
+  }
+}
+
+@keyframes line {
+  100% {
+    stroke-dashoffset: calc(74px * 3.14 * (1 - var(--progress) / 100));
+  }
+}
+
+
+/* ──────────────────── 반응형 ────────────────────── */
+
+/* 1669px 이하 */
+@media (max-width:1669px) {
+  header {
+    display: flex;
+    justify-content: space-between;
+    font-size: 20px;
+    font-weight: 500;
+  }
+
+  .menu {
+    display: flex;
+    gap: 100px;
+  }
+
+  .menu a {
+    color: rgba(255, 255, 255, 0.70);
+  }
+
+  .menu a.active {
+    color: white;
+    border-bottom: 1px solid white;
   }
 }
