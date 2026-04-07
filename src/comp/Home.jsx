@@ -10,8 +10,8 @@ function Home() {
         <div className='H_main'>
             <h1>안녕하세요,</h1>
             <div className='H_titleMain'>
-                <div>고민하며 성장하는</div>
-                <div className='H_name'>이현주입니다.</div>
+                <div><p>고민하며 성장하는</p></div>
+                <div className='H_name'><p>이현주입니다.</p></div>
             </div>
         </div>
 

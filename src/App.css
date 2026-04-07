@@ -32,12 +32,16 @@ button {
   cursor: pointer;
 }
 
+::-webkit-scrollbar{
+  display: none;
+}
+
 html {
   background: linear-gradient(to bottom, #160A38, black);
   color: white;
   padding: 35px 90px;
   min-height: 100vh;
-  overflow: hidden;
+ 
 }
 
 header {
@@ -54,12 +58,14 @@ header {
 
 .menu a {
   color: rgba(255, 255, 255, 0.70);
+
 }
 
 .menu a.active {
   color: white;
   border-bottom: 1px solid white;
 }
+
 
 
 
@@ -115,8 +121,10 @@ svg circle:nth-of-type(3) {
   }
 }
 
+ #nav-icon3 {
+  display: none;}
 
-/* ──────────────────── 반응형 ────────────────────── */
+/* ──────────────────── header 반응형 ────────────────────── */
 
 /* 1669px 이하 */
 @media (max-width:1669px) {
@@ -139,5 +147,200 @@ svg circle:nth-of-type(3) {
   .menu a.active {
     color: white;
     border-bottom: 1px solid white;
+  }
+}
+
+/* 1380px 이하 */
+@media (max-width:1380px) {
+  .menu {
+    display: flex;
+    gap: 70px;
+  }
+}
+
+
+/* 1180px 이하 */
+@media (max-width:1180px) {
+  header {
+    font-size: 17px;
+    font-weight: 400;
+  }
+
+  .menu {
+    display: flex;
+    gap: 45px;
+  }
+}
+
+
+/* 920px 이하 */
+@media (max-width:920px) {
+  header {
+    font-size: 16px;
+    font-weight: 400;
+  }
+
+  .menu {
+    display: flex;
+    gap: 35px;
+  }
+}
+
+
+/* 860px 이하 */
+@media (max-width:860px) {
+  header {
+    font-size: 16px;
+    font-weight: 400;
+  }
+
+  .menu {
+    display: none;
+    opacity: 0;
+    gap: 35px;
+  }
+
+  /* menu에 open 클래스가 붙으면...(버거메뉴가 열리면) */
+  .menu.open {
+    position: absolute;
+    top: 70px;
+    right: 30px;
+
+    display: flex;
+    flex-direction: column;
+    gap: 35px;
+    background: rgb(40, 27, 77);
+    padding: 20px 30px;
+
+    transition: 2s;
+    z-index: 10;
+    animation: fadeIn 0.5s ease-in-out forwards;
+
+  }
+
+  @keyframes fadeIn {
+
+    to {
+      opacity: 1;
+    }
+  }
+
+
+  #nav-icon3 {
+    display: block;
+    width: 60px;
+    height: 45px;
+    position: absolute;
+    right: 30px;
+    top: 10px;
+    cursor: pointer;
+    transform: scale(0.5);
+  }
+
+  #nav-icon3 span {
+    display: block;
+    position: absolute;
+    height: 9px;
+    width: 100%;
+    background: #9DFFFA;
+    border-radius: 9px;
+    opacity: 1;
+    left: 0;
+
+    transition: .25s ease-in-out;
+  }
+
+
+  #nav-icon3 span:nth-child(1) {
+    top: 0px;
+  }
+
+  #nav-icon3 span:nth-child(2),
+  #nav-icon3 span:nth-child(3) {
+    top: 18px;
+  }
+
+  #nav-icon3 span:nth-child(4) {
+    top: 36px;
+  }
+
+
+
+  /* icon3에 open 클래스가 붙으면 실행 하는 스타일 ↓ ↓ ↓ */
+  #nav-icon3.open span:nth-child(1) {
+    top: 18px;
+    width: 0%;
+    left: 50%;
+  }
+
+  #nav-icon3.open span:nth-child(2) {
+    -webkit-transform: rotate(45deg);
+    -moz-transform: rotate(45deg);
+    -o-transform: rotate(45deg);
+    transform: rotate(45deg);
+  }
+
+  #nav-icon3.open span:nth-child(3) {
+    -webkit-transform: rotate(-45deg);
+    -moz-transform: rotate(-45deg);
+    -o-transform: rotate(-45deg);
+    transform: rotate(-45deg);
+  }
+
+  #nav-icon3.open span:nth-child(4) {
+    top: 18px;
+    width: 0%;
+    left: 50%;
+  }
+
+  /* Icon 4 */
+
+  #nav-icon4 {}
+
+  #nav-icon4 span:nth-child(1) {
+    top: 0px;
+    -webkit-transform-origin: left center;
+    -moz-transform-origin: left center;
+    -o-transform-origin: left center;
+    transform-origin: left center;
+  }
+
+  #nav-icon4 span:nth-child(2) {
+    top: 18px;
+    -webkit-transform-origin: left center;
+    -moz-transform-origin: left center;
+    -o-transform-origin: left center;
+    transform-origin: left center;
+  }
+
+  #nav-icon4 span:nth-child(3) {
+    top: 36px;
+    -webkit-transform-origin: left center;
+    -moz-transform-origin: left center;
+    -o-transform-origin: left center;
+    transform-origin: left center;
+  }
+
+  #nav-icon4.open span:nth-child(1) {
+    -webkit-transform: rotate(45deg);
+    -moz-transform: rotate(45deg);
+    -o-transform: rotate(45deg);
+    transform: rotate(45deg);
+    top: -3px;
+    left: 8px;
+  }
+
+  #nav-icon4.open span:nth-child(2) {
+    width: 0%;
+    opacity: 0;
+  }
+
+  #nav-icon4.open span:nth-child(3) {
+    -webkit-transform: rotate(-45deg);
+    -moz-transform: rotate(-45deg);
+    -o-transform: rotate(-45deg);
+    transform: rotate(-45deg);
+    top: 39px;
+    left: 8px;
   }
 }

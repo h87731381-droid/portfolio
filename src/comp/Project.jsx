@@ -1,9 +1,13 @@
-import React, { useState } from 'react'
+import React, { useEffect, useState } from 'react'
 import projects from '../json/popup.json'
 import projectList from '../json/projectList.json'
 
 function Project() {
     const [show, setShow] = useState(false);
+
+    useEffect(() => {
+        document.body.style.overflow = (show ? 'hidden' : 'auto' );
+    },[show]);
 
     return (
         <div className='P_list'>
@@ -27,7 +31,6 @@ function Project() {
                 })}
 
             </div>
-
 
             <Popup setShow={setShow} show={show} />
 
@@ -59,7 +62,7 @@ function Popup({ show, setShow }) {
                                                 <h1>{pj.title}</h1>
                                                 <a href={pj.github} target="_blank" rel="noopener noreferrer"><img src="github.svg" alt="" /></a>
                                             </div>
-                                            <img src={pj.img} alt="" />
+                                            <img className='ppp_img' src={pj.img} alt="" />
                                         </div>
                                         <div className='ppp_data'>
                                             <div className='ppp_note'>

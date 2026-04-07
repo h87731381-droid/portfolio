@@ -9,8 +9,11 @@ var numStars = 2000;
 $('document').ready(function() {
   
   // Calculate the screen size
-	screenH = $(window).height();
-	screenW = $(window).width();
+	screenW = 2000;
+	screenH = 1000;
+  
+  	//screenH = $(window).height();
+	// screenW = $(window).width();
 	
 	// Get the canvas
 	canvas = $('#space');

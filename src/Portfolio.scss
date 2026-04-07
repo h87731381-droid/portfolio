@@ -1,8 +1,6 @@
 /* 전페이지 큰제목 스타일 */
 .title {
     font-size: 40px;
-    width: 260px;
-    border-bottom: 1px solid #666666;
     padding: 70px 0 0 0;
 }
 
@@ -33,7 +31,7 @@ main {
 
             .H_name {
                 border-top: 1px solid white;
-                width: 900px;
+                width: 60%;
             }
         }
 
@@ -49,28 +47,50 @@ main {
         }
     }
 
-    .H_imgBox {
-        padding: 100px 100px 0 0;
+
+    /* home, about - 궤도 */
+    .H_imgBox_group {
         position: absolute;
-        top: 0;
         right: 0;
-        margin: 0;
+        top: 0px;
 
-        img {
-            width: 455px;
-            height: 645px;
+        .H_imgBox {
+            padding: 100px 20px 0 0;
+            margin: 0;
+
+            img {
+                width: 455px;
+                height: 645px;
+            }
+
+            .H_note {
+                position: absolute;
+                top: 43%;
+                left: 130px;
+                width: 200px;
+                text-align: center;
+                font-size: 17px;
+                font-weight: 500;
+            }
         }
 
-        .H_note {
+        .diamond {
             position: absolute;
-            top: 43%;
-            left: 130px;
-            width: 200px;
-            text-align: center;
-            font-size: 17px;
-            font-weight: 500;
+            left: -100px;
+            top: 130px;
+            opacity: 0.7;
         }
+
+        .diamond rect {
+            width: 16px;
+            height: 16px;
+            transform: translate(-10px, -10px) rotate(45deg);
+        }
+
     }
+
+
+
 }
 
 
@@ -81,7 +101,7 @@ main {
     /* 소제목 전역 스타일 */
     .mission_profile {
         font-size: 25px;
-        width: 785px;
+        width: 100%;
         border-bottom: 1px solid #9DFFFA;
         padding: 10px;
     }
@@ -91,20 +111,16 @@ main {
         font-size: 17px;
         padding: 0 10px;
         margin: 0;
-        line-height: 0.5;
         color: #cfcfcf;
     }
 
     .A_contentsBox {
         padding: 40px 0 0 0;
+        width: 100%;
 
         .A_textAll {
-            border: 1px solid #353535;
-            backdrop-filter: blur(5px);
-            box-shadow: 0 0 10px rgba(0, 242, 255, 0.5), inset 0 0 5px rgba(0, 242, 255, 0.2);
-            border-radius: 50px;
             padding: 30px;
-            width: 850px;
+            width: 60%;
 
             .A_data {
                 display: grid;
@@ -154,11 +170,6 @@ main {
         gap: 50px;
         padding: 30px;
 
-        /* border: 1px solid #353535;
-        backdrop-filter: blur(5px);
-        box-shadow: 0 0 10px rgba(0, 242, 255, 0.5), inset 0 0 5px rgba(0, 242, 255, 0.2);
-        border-radius: 50px;
-     */
         .s_box {
             display: flex;
             flex-direction: column;
@@ -175,7 +186,7 @@ main {
             }
 
             .S_skill_note {
-                width: 524px;
+                width: 100%;
                 display: flex;
                 align-items: center;
                 gap: 20px;
@@ -199,9 +210,8 @@ main {
         flex-wrap: wrap;
         gap: 40px;
         justify-content: center;
-        width: 1110px;
-        margin: 0 auto;
-        padding: 30px 0 0 0;
+        padding: 30px 150px;
+
 
         .P_listOne {
             width: 336px;
@@ -263,7 +273,7 @@ main {
 }
 
 
-/* popup */
+/* project - popup */
 .popup {
     background-color: rgba(0, 0, 0, 0.637);
     position: fixed;
@@ -282,17 +292,15 @@ main {
         }
 
         p {
-            padding: 5px 0 0 0;
-            line-height: 1.8;
             color: rgb(177, 177, 177);
         }
 
         background-color: #252525;
-        width: 1100px;
-        height: 800px;
-        padding: 60px;
-        border-radius: 50px;
         border: 1px solid #3f3f3f;
+        width: 50vw;
+        height: 90vh;
+        padding: 3vw;
+        border-radius: 2vw;
 
         .ppp_title {
             padding: 0 0 30px 0;
@@ -302,6 +310,10 @@ main {
                 align-items: center;
                 padding: 0 0 30px 0;
                 gap: 10px;
+            }
+
+            .ppp_img {
+                width: 100%;
             }
         }
 
@@ -363,7 +375,7 @@ main {
 
 /* guest book (book) */
 .book_section {
-    padding: 60px 0 0 0;
+    padding: 40px 0 0 0;
     width: 100%;
     min-height: 100vh;
     margin: 0 auto;
@@ -376,42 +388,76 @@ main {
 
     .guestBook {
 
+        .nickName {
+            padding: 0 0 10px 0;
+            display: flex;
+            gap: 10px;
+            width: 10%;
+
+            input {
+                width: 200px;
+                padding: 5px;
+                background-color: black;
+                border: 1px solid #3f3f3f;
+                border-radius: 5px;
+                color: white;
+            }
+
+            input:focus {
+                outline: none;
+                border: 1px solid #9DFFFA;
+                box-shadow: 0 0 5px #9DFFFA;
+            }
+
+            button {
+                padding: 4px 0;
+                background-color: #252525;
+                border: 1px solid #3f3f3f;
+                border-radius: 5px;
+                color: white;
+                width: 80px;
+            }
+
+        }
+
         .book_guest {
 
-            .formtext {
-                display: flex;
-                justify-content: space-between;
 
-                .book_text {
-                    width: 1425px;
-                    height: 70px;
-                    resize: none;
-                    background-color: black;
-                    border: 1px solid #3f3f3f;
-                    border-radius: 5px;
-                    color: white;
-                    padding: 10px;
-                }
+            display: flex;
+            justify-content: space-between;
 
-                textarea:focus {
-                    outline: none;
-                    border: 1px solid #9DFFFA;
-                    box-shadow: 0 0 5px #9DFFFA;
-                }
-
-                button {
-                    padding: 5px 90px;
-                    background-color: #252525;
-                    border: 1px solid #3f3f3f;
-                    border-radius: 5px;
-                    color: white;
-                }
-
-                button:hover {
-                    box-shadow: 2px 4px 0 #3f3f3f;
-                    transform: translateY(-2px);
-                }
+            .book_text {
+                width: 80%;
+                height: 70px;
+                resize: none;
+                background-color: black;
+                border: 1px solid #3f3f3f;
+                border-radius: 5px;
+                color: white;
+                padding: 10px;
             }
+
+            textarea:focus {
+                outline: none;
+                border: 1px solid #9DFFFA;
+                box-shadow: 0 0 5px #9DFFFA;
+            }
+
+            button {
+                padding: 5px 0px;
+                background-color: #252525;
+                border: 1px solid #3f3f3f;
+                border-radius: 5px;
+                color: white;
+                width: 17%;
+                flex-shrink: 0;
+            }
+
+            button:hover {
+                box-shadow: 2px 4px 0 #3f3f3f;
+                transform: translateY(-2px);
+            }
+
         }
 
 
@@ -428,17 +474,20 @@ main {
                 border-bottom: 1px dashed #505050;
 
                 .book_txt {
-                    width: 1400px;
+                    width: 80%;
                     height: 60px;
                     display: flex;
                     align-items: center;
                     overflow: hidden;
+                    word-break: break-word;
                 }
 
                 .book_detail {
                     display: flex;
                     gap: 10px;
                     padding: 20px 0 0 0;
+                    width: 200px;
+                    flex-shrink: 0;
                 }
             }
         }
@@ -472,11 +521,33 @@ main {
 /* ──────────────────── 반응형 ────────────────────── */
 
 /* 1669px 이하 */
-@media (max-width:1669px) {
+@media (min-width:1536px) and (max-width:1669px) {
 
     /* home, about */
-    main .H_imgBox {
-        right: -55px;
+    main {
+
+        .H_title {
+
+            h1 {
+                font-size: 4vw;
+            }
+
+            .H_titleMain {
+                font-size: 5vw;
+
+                .H_name {
+                    width: 60%;
+                }
+            }
+        }
+
+        .A_all {
+            .A_contentsBox {
+                .A_textAll {
+                    width: 55%;
+                }
+            }
+        }
     }
 
     /* tech orbit */
@@ -513,6 +584,448 @@ main {
 
                 }
             }
+        }
+    }
+
+    /* guest book */
+    .book_section {
+        min-height: 0;
+    }
+}
+
+/* 1567px 이하 -project */
+@media screen and (max-width:1567px) {
+    .P_list .P_thumbList {
+        padding: 30px;
+    }
+}
+
+/* 1495px 이하 */
+@media (min-width:1495px) and (max-width:1536px) {
+    .S_section .s_boxAll {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        gap: 50px;
+        padding: 30px;
+
+        .s_box {
+            display: flex;
+            flex-direction: column;
+            gap: 50px;
+
+            .S_id {
+                width: 74px;
+                height: 74px;
+                text-align: center;
+                display: grid;
+                align-items: center;
+                flex-shrink: 0;
+                /* flex 고유 사이즈 제어기능 제거 */
+            }
+
+            .S_skill_note {
+                width: 400px;
+                display: flex;
+                align-items: center;
+                gap: 20px;
+                position: relative;
+            }
+        }
+    }
+
+    /* projext */
+    .popup .popup_back {
+        width: 70vw;
+        height: 80vh;
+    }
+
+    /* guest book */
+    .book_section {
+        min-height: 0;
+    }
+}
+
+
+/* 1488px 이하 */
+@media (min-width:1321px) and (max-width:1495px) {
+
+    /* home */
+    main {
+
+        .H_title {
+            .H_titleMain {
+                font-size: 80px;
+            }
+
+            .H_name {
+                width: 100%;
+            }
+        }
+    }
+
+    /* tech orbit */
+    .S_section {
+        padding: 50px 0 0 0;
+
+        .s_boxAll {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 50px;
+            padding: 30px;
+
+            .s_box {
+                display: flex;
+                flex-direction: column;
+                gap: 50px;
+
+                .S_id {
+                    width: 74px;
+                    height: 74px;
+                    text-align: center;
+                    display: grid;
+                    align-items: center;
+                    flex-shrink: 0;
+                    /* flex 고유 사이즈 제어기능 제거 */
+                }
+
+                .S_skill_note {
+                    width: 300px;
+                    display: flex;
+                    align-items: center;
+                    gap: 20px;
+                    position: relative;
+
+                }
+            }
+        }
+    }
+
+    /* projext */
+    .popup .popup_back {
+        width: 70vw;
+        height: 80vh;
+    }
+
+    /* guest book */
+    .book_section {
+        min-height: 0;
+    }
+}
+
+/* 1320px 이하 */
+@media screen and (max-width: 1320px) {
+
+    html {
+        overflow: visible;
+
+        span {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+    }
+
+    /* about */
+    main .H_imgBox {
+        display: none;
+    }
+
+    .A_all .A_contentsBox {
+        padding: 0;
+    }
+
+    .A_all .A_contentsBox .A_textAll {
+        width: 100%;
+        border: none;
+        box-shadow: none;
+        backdrop-filter: none;
+        margin: 0 auto;
+    }
+
+    main .H_title h1 {
+        font-size: 6vw;
+    }
+
+    main .H_title .H_titleMain {
+        font-size: 7vw;
+    }
+
+    main .H_title .H_titleMain .H_name {
+        width: 80%;
+    }
+
+    .A_all .mission_profile,
+    .A_all .mission_note {
+        width: 100%;
+    }
+
+    /* tech orbit */
+    .S_section .s_boxAll {
+        display: grid;
+        grid: none;
+    }
+
+    .H_imgBox_group svg {
+        display: none;
+    }
+
+    /* projext */
+    .popup .popup_back {
+        width: 70vw;
+        height: 80vh;
+    }
+
+    /* guest book */
+    .book_section .guestBook .book_list .book_note {
+        display: flex;
+        flex-direction: column;
+        gap: 0;
+    }
+
+    .book_section .guestBook .book_guest .formtext .book_text {
+        width: 100%;
+    }
+
+    .book_section {
+        min-height: 0;
+    }
+
+    .book_section .guestBook .book_guest .formtext {
+        flex-direction: column;
+        gap: 10px;
+    }
+
+    .book_section .guestBook .book_guest .formtext button {
+        width: 100%;
+    }
+}
+
+/* 1035px 이하 */
+@media screen and (max-width: 1035px) {
+
+    /* 팝업 */
+    .popup .popup_back .ppp_data .ppp_note {
+        display: flex;
+        flex-direction: column;
+        gap: 30px;
+    }
+
+    .popup .popup_back {
+        overflow: auto;
+    }
+
+
+    /* 전체 바 */
+    .popup_back::-webkit-scrollbar {
+        width: 6px;
+    }
+
+    /* 스크롤 막대 */
+    .popup_back::-webkit-scrollbar-thumb {
+        background: #9DFFFA;
+        border-radius: 10px;
+    }
+
+    /* 배경 */
+    .popup_back::-webkit-scrollbar-track {
+        background: transparent;
+    }
+
+    /* projext */
+    .popup .popup_back {
+        width: 70vw;
+        height: 80vh;
+    }
+
+    .P_list .P_thumbList {
+        padding: 30px 0;
+    }
+
+    /* guset book */
+    .book_section .guestBook .book_guest {
+        display: flex;
+        flex-direction: column;
+        gap: 10px;
+    }
+
+    .book_section .guestBook .book_guest .book_text,
+    .book_section .guestBook .book_guest button {
+        width: 100%;
+    }
+}
+
+/* 906px 이하 - project */
+@media (min-width:700px) and (max-width: 906px) {
+
+    .P_list .P_thumbList {
+        display: flex;
+        gap: 20px;
+
+    }
+
+}
+
+
+/* 580px 이하 */
+@media (min-width:430px) and (max-width:580px) {
+    html {
+        padding: 10px;
+    }
+
+    main {
+
+        .H_imgBox {
+            display: none;
+        }
+
+        .H_title {
+
+            h1 {
+                font-size: 7vw;
+            }
+
+            .H_link {
+                font-size: 5vw;
+            }
+
+            .H_titleMain {
+                font-size: 7vw;
+
+                .H_name {
+                    width: 100%;
+                }
+            }
+        }
+    }
+
+    /* project */
+    .P_list .P_thumbList {
+        padding: 30px 0;
+    }
+
+    /* project - hover effect 제거 */
+    .P_list .P_thumbList .P_listOne .P_hover {
+        opacity: 1;
+        transition: 0s;
+    }
+
+    /* project - popup */
+    .popup .popup_back .ppp_title .ppp_img {
+        display: none;
+    }
+
+    .popup .popup_back .X_back {
+        position: static;
+    }
+
+    .popup .popup_back .X_back .X {
+        top: 30px;
+        right: 30px;
+    }
+
+    /* guest book */
+    .book_section .book_page {
+        gap: 10%;
+    }
+
+}
+
+
+/* 430px 이하 */
+@media (min-width:300px) and (max-width:430px) {
+    html {
+        padding: 20px;
+    }
+
+    main {
+
+        .H_imgBox {
+            display: none;
+        }
+
+        .H_title {
+
+            h1 {
+                font-size: 8vw;
+            }
+
+            .H_link {
+                font-size: 9vw;
+                display: flex;
+                gap: 50px;
+
+                img {
+                    display: none;
+                }
+            }
+
+            .H_titleMain {
+                font-size: 10vw;
+
+                .H_name {
+                    width: 100%;
+                }
+            }
+        }
+    }
+
+    /* project */
+    .P_list .P_thumbList {
+        padding: 30px 0;
+    }
+
+    .popup .popup_back {
+        width: 70vw;
+        height: 80vh;
+    }
+
+    /* project - popup */
+    .popup .popup_back .ppp_title .ppp_img {
+        display: none;
+    }
+
+    .popup .popup_back .ppp_title .ppp_title_github h1 {
+        font-size: 7vw;
+    }
+
+    .popup .popup_back .X_back {
+        position: static;
+    }
+
+    .popup .popup_back .X_back .X {
+        top: 30px;
+        right: 30px;
+    }
+
+
+    /* guest book */
+    .book_section .book_page {
+        gap: 10%;
+
+        p {
+            font-size: 5vw;
+        }
+
+        img {
+            width: 10%;
+            height: auto;
+        }
+    }
+
+    .book_section {
+        min-height: 0;
+    }
+
+    .book_section .guestBook .nickName .nickForm {
+        flex-direction: column;
+        gap: 10px;
+
+        input {
+            width: 100%;
+        }
+
+        button {
+            width: 100%;
         }
     }
 }
