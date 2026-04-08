@@ -16,6 +16,7 @@ main {
         height: 750px;
         justify-content: center;
         gap: 105px;
+        padding-top: 70px;
 
         h1 {
             padding: 0 0 20px 0;
@@ -415,7 +416,7 @@ main {
 .book_section {
     padding: 40px 0 0 0;
     width: 100%;
-    min-height: 100vh;
+    /* min-height: 100vh; */
     margin: 0 auto;
 
     p,
