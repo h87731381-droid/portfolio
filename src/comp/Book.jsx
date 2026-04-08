@@ -78,8 +78,7 @@ function Book() {
               <input type="text" name="nickname" maxLength={3} autoComplete="off" placeholder="이름을 입력해주세요." />
             </div>
             <div className='book_guest'>
-              <textarea className='book_text' name="bookText" maxLength={120} autoComplete="off" placeholder="소통해요..^^;
-                  포트폴리오를 보고 느낀점을 자유롭게 남겨주세요.(50자 이내)">
+              <textarea className='book_text' name="bookText" maxLength={120} autoComplete="off" placeholder="포트폴리오를 보고 느낀점을 자유롭게 남겨주세요.(50자 이내)">
               </textarea>
               <button>등록하기</button>
             </div>
