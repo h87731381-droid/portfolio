@@ -833,7 +833,7 @@ main {
         gap: 0;
     }
 
-    .book_section .guestBook .book_guest .formtext .book_text {
+    .book_section .guestBook .book_list .book_note .book_txt {
         width: 100%;
     }
 
@@ -878,7 +878,7 @@ main {
         gap: 10px;
     }
 
-    .book_section .guestBook .book_guest .book_text,
+    .book_section .guestBook .book_list .book_note .book_txt,
     .book_section .guestBook .book_guest button {
         width: 100%;
     }
@@ -947,6 +947,10 @@ main {
     /* guest book */
     .book_section .book_page {
         gap: 10%;
+    }
+
+    .book_section .guestBook .book_list .book_note .book_txt {
+        width: 100%;
     }
 
 }
@@ -1045,5 +1049,9 @@ main {
         button {
             width: 100%;
         }
+    }
+
+    .book_section .guestBook .book_list .book_note .book_txt {
+        width: 100%;
     }
 }
