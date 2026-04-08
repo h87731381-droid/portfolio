@@ -31,7 +31,9 @@ function Book() {
     formdata.append('date',dateformat)
 
     const data = Object.fromEntries(formdata);
-    await axios.post('http://localhost:4000/guest', data);
+    await axios.post(`${process.env.REACT_APP_APIURL}/guest`, data);
+
+    /* form에 글을 작성하고 버튼을 누르면 form 안에 글자 지워지기 */
     e.target.reset();
 
     getdata();
@@ -39,7 +41,7 @@ function Book() {
   }
 
   const getdata = async function (e) {
-    const res = await axios.get('http://localhost:4000/guest');
+    const res = await axios.get(`${process.env.REACT_APP_APIURL}/guest`);
 
     //page
     let limit = 4, data = [];
@@ -57,7 +59,6 @@ function Book() {
     getdata();
   },[page])
 
-  /* form에 글을 작성하고 버튼을 누르면 form 안에 글자 지워지기 */
   
   
   /* 데이터의 갯수가 0 이면.. */

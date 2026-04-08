@@ -32,7 +32,7 @@ button {
   cursor: pointer;
 }
 
-::-webkit-scrollbar{
+::-webkit-scrollbar {
   display: none;
 }
 
@@ -41,7 +41,7 @@ html {
   color: white;
   padding: 35px 90px;
   min-height: 100vh;
- 
+
 }
 
 header {
@@ -57,15 +57,38 @@ header {
 }
 
 .menu a {
-  color: rgba(255, 255, 255, 0.70);
-
+  color: rgba(255, 255, 255, 0.6);
 }
 
 .menu a.active {
   color: white;
-  border-bottom: 1px solid white;
+  font-weight: 500;
 }
 
+/* ─────── 헤더 애니메이션 - PC ───── */
+.menu a::after {
+  content:'';  /* 이거 없으면 작동 안함 */
+
+  border-bottom: 1px solid white;
+  display: block;
+  /* margin:0 auto; 가운데서 시작 하고싶으면 */
+  
+  width: 0%;  /* 처음상태 */
+}
+
+.menu a.active::after {
+  animation: line2 0.5s forwards;
+  /* forwerd 애프터되고 멈추기 | alternate 다시 돌아가기 | infinite 반복하기 */
+}
+
+@keyframes line2 {
+  from{width:0%;} /* Before */
+  to {
+    width: 100%; /* after */
+  }
+
+  /*가로 줄 길이 100%로 변형*/
+}
 
 
 
@@ -121,8 +144,9 @@ svg circle:nth-of-type(3) {
   }
 }
 
- #nav-icon3 {
-  display: none;}
+#nav-icon3 {
+  display: none;
+}
 
 /* ──────────────────── header 반응형 ────────────────────── */
 
@@ -140,13 +164,8 @@ svg circle:nth-of-type(3) {
     gap: 100px;
   }
 
-  .menu a {
-    color: rgba(255, 255, 255, 0.70);
-  }
-
   .menu a.active {
     color: white;
-    border-bottom: 1px solid white;
   }
 }
 
@@ -190,33 +209,38 @@ svg circle:nth-of-type(3) {
 /* 860px 이하 */
 @media (max-width:860px) {
   header {
-    font-size: 16px;
-    font-weight: 400;
+    font-size: 5vw;
+  }
+
+  header .hyunju {
+    font-size: 17px;
   }
 
   .menu {
     display: none;
     opacity: 0;
     gap: 35px;
+    padding: 20%;
   }
 
   /* menu에 open 클래스가 붙으면...(버거메뉴가 열리면) */
   .menu.open {
     position: absolute;
-    top: 70px;
-    right: 30px;
+    top: 0;
+    right: 0;
 
     display: flex;
     flex-direction: column;
-    gap: 35px;
-    background: rgb(40, 27, 77);
-    padding: 20px 30px;
+    gap: 45px;
+    background: black;
+    width: 100%;
+    height: 100%;
 
-    transition: 2s;
     z-index: 10;
     animation: fadeIn 0.5s ease-in-out forwards;
 
   }
+  .menu a.active::after {    animation: none;}
 
   @keyframes fadeIn {
 
@@ -231,18 +255,19 @@ svg circle:nth-of-type(3) {
     width: 60px;
     height: 45px;
     position: absolute;
-    right: 30px;
+    right: 10px;
     top: 10px;
     cursor: pointer;
     transform: scale(0.5);
+    z-index: 100;
   }
 
   #nav-icon3 span {
     display: block;
     position: absolute;
-    height: 9px;
+    height: 5px;
     width: 100%;
-    background: #9DFFFA;
+    background: white;
     border-radius: 9px;
     opacity: 1;
     left: 0;
@@ -266,7 +291,7 @@ svg circle:nth-of-type(3) {
 
 
 
-  /* icon3에 open 클래스가 붙으면 실행 하는 스타일 ↓ ↓ ↓ */
+  /* icon3에 open 클래스가 붙으면 실행 하는 스타일 (X버튼으로 바뀌는 과정) */
   #nav-icon3.open span:nth-child(1) {
     top: 18px;
     width: 0%;

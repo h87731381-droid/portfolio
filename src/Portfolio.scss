@@ -275,6 +275,7 @@ main {
 
 /* project - popup */
 .popup {
+
     background-color: rgba(0, 0, 0, 0.637);
     position: fixed;
     top: 0;
@@ -285,7 +286,50 @@ main {
     justify-content: center;
     align-items: center;
 
+    z-index: 110;
+
+     .X {
+            position: absolute;
+            top: calc(5vh + 20px);
+            right: calc(25vw + 20px);
+            margin: 0;
+            cursor: pointer;
+            z-index:999;
+        }
+
     .popup_back {
+        opacity: 0;
+        transform: translateY(20%);
+        animation: show .5s forwards;
+
+        @keyframes show {
+            100% {
+                opacity: 1;
+                transform: translateY(0%);
+            }
+        }
+
+        overflow: auto;
+
+        /* 전체 바 */
+        &::-webkit-scrollbar {
+            width: 6px;
+        }
+
+        /* 스크롤 막대 */
+        &::-webkit-scrollbar-thumb {
+            background: rgb(65, 65, 65);
+            border-radius: 10px;
+        }
+
+        /* 배경 투명 */
+        /* &::-webkit-scrollbar-track {
+            background: transparent;
+        } */
+
+        &::-webkit-scrollbar {
+            display: block;
+        }
 
         b {
             font-size: 20px;
@@ -358,16 +402,10 @@ main {
             }
         }
 
+       
         .X_back {
-            position: relative;
+            /* position: relative; */
 
-            .X {
-                position: absolute;
-                top: 0;
-                right: 0;
-                margin: 0;
-                cursor: pointer;
-            }
         }
     }
 }
@@ -408,16 +446,6 @@ main {
                 border: 1px solid #9DFFFA;
                 box-shadow: 0 0 5px #9DFFFA;
             }
-
-            button {
-                padding: 4px 0;
-                background-color: #252525;
-                border: 1px solid #3f3f3f;
-                border-radius: 5px;
-                color: white;
-                width: 80px;
-            }
-
         }
 
         .book_guest {
@@ -503,12 +531,16 @@ main {
 
         p {
             font-size: 25px;
+            font-weight: 100;
         }
 
-        ;
+        p.active {
+            font-weight: 700;
+        }
 
         .arrow_left,
-        .arrow_right {
+        .arrow_right,
+        p {
             cursor: pointer;
         }
     }
@@ -595,6 +627,13 @@ main {
 
 /* 1567px 이하 -project */
 @media screen and (max-width:1567px) {
+     .popup .X{
+            position: absolute;
+            top: calc(10vh - 38px);
+            right: calc(15vw - 38px);
+            margin: 0;
+            cursor: pointer;
+        }
     .P_list .P_thumbList {
         padding: 30px;
     }
@@ -706,6 +745,12 @@ main {
         height: 80vh;
     }
 
+    .popup .popup_back .X_back .X {
+        position: absolute;
+        top: -50px;
+        right: -50px;
+    }
+
     /* guest book */
     .book_section {
         min-height: 0;
@@ -775,6 +820,12 @@ main {
         height: 80vh;
     }
 
+    /* project - hover effect 제거 */
+    .P_list .P_thumbList .P_listOne .P_hover {
+        opacity: 1;
+        transition: 0s;
+    }
+
     /* guest book */
     .book_section .guestBook .book_list .book_note {
         display: flex;
@@ -808,27 +859,6 @@ main {
         display: flex;
         flex-direction: column;
         gap: 30px;
-    }
-
-    .popup .popup_back {
-        overflow: auto;
-    }
-
-
-    /* 전체 바 */
-    .popup_back::-webkit-scrollbar {
-        width: 6px;
-    }
-
-    /* 스크롤 막대 */
-    .popup_back::-webkit-scrollbar-thumb {
-        background: #9DFFFA;
-        border-radius: 10px;
-    }
-
-    /* 배경 */
-    .popup_back::-webkit-scrollbar-track {
-        background: transparent;
     }
 
     /* projext */
@@ -914,15 +944,6 @@ main {
         display: none;
     }
 
-    .popup .popup_back .X_back {
-        position: static;
-    }
-
-    .popup .popup_back .X_back .X {
-        top: 30px;
-        right: 30px;
-    }
-
     /* guest book */
     .book_section .book_page {
         gap: 10%;
@@ -979,6 +1000,12 @@ main {
         height: 80vh;
     }
 
+    /* project - hover effect 제거 */
+    .P_list .P_thumbList .P_listOne .P_hover {
+        opacity: 1;
+        transition: 0s;
+    }
+
     /* project - popup */
     .popup .popup_back .ppp_title .ppp_img {
         display: none;
@@ -986,15 +1013,6 @@ main {
 
     .popup .popup_back .ppp_title .ppp_title_github h1 {
         font-size: 7vw;
-    }
-
-    .popup .popup_back .X_back {
-        position: static;
-    }
-
-    .popup .popup_back .X_back .X {
-        top: 30px;
-        right: 30px;
     }
 
 

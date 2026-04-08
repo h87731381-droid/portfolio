@@ -50,14 +50,14 @@ function Popup({ show, setShow }) {
         <>
             {show &&
                 <div className='popup'>
+                    <img className='X' src="meteor-icons_xmark.svg" onClick={() => setShow(false)} />
                     <div className='popup_back'>
                         <div className='X_back'>
-                            <img className='X' src="meteor-icons_xmark.svg" onClick={() => setShow(false)} />
                         
                             {projects.map((pj) => {
                                 return (
-                                    <div>
-                                        <div className='ppp_title' key={pj.id}>
+                                    <div key={pj.id}>
+                                        <div className='ppp_title'>
                                             <div className='ppp_title_github'>
                                                 <h1>{pj.title}</h1>
                                                 <a href={pj.github} target="_blank" rel="noopener noreferrer"><img src="github.svg" alt="" /></a>
