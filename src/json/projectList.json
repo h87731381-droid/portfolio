@@ -2,37 +2,19 @@
     {
         "id": 10,
         "name": "영화 소개 사이트",
-        "type": ["js", "jQuery"],
+        "type": ["js", "React"],
         "photo":"thumbnail_movie(2).jpg"
     },
     {
         "id": 11,
-        "name": "영화 소개 사이트",
+        "name": "나의 포트폴리오",
         "type": ["js", "jQuery"],
-        "photo":"thumbnail_movie(2).jpg"
+        "photo":"property.jpg"
     },
     {
         "id": 12,
-        "name": "영화 소개 사이트",
+        "name": "여행 계획 사이트",
         "type": ["js", "jQuery"],
-        "photo":"thumbnail_movie(2).jpg"
-    },
-    {
-        "id": 13,
-        "name": "영화 소개 사이트",
-        "type": ["js", "jQuery"],
-        "photo":"thumbnail_movie(2).jpg"
-    },
-    {
-        "id": 14,
-        "name": "영화 소개 사이트",
-        "type": ["js", "jQuery"],
-        "photo":"thumbnail_movie(2).jpg"
-    },
-    {
-        "id": 15,
-        "name": "영화 소개 사이트",
-        "type": ["js", "jQuery"],
-        "photo":"thumbnail_movie(2).jpg"
+        "photo":"planLoginAfter.jpg"
     }
 ]

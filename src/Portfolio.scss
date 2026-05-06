@@ -152,6 +152,18 @@ main {
                             width: 30px;
                             height: 30px;
                         }
+
+                        >a {
+                            cursor: pointer;
+                            padding: 0 0 0 1%;
+                            color: #CFCFCF;
+
+                            &:hover {
+                                text-decoration: underline;
+                                text-decoration-thickness: 2px;
+                                text-underline-offset: 3px;
+                            }
+                        }
                     }
                 }
             }
@@ -289,14 +301,14 @@ main {
 
     z-index: 110;
 
-     .X {
-            position: absolute;
-            top: calc(5vh + 20px);
-            right: calc(25vw + 20px);
-            margin: 0;
-            cursor: pointer;
-            z-index:999;
-        }
+    .X {
+        position: absolute;
+        top: calc(5vh + 20px);
+        right: calc(25vw + 20px);
+        margin: 0;
+        cursor: pointer;
+        z-index: 999;
+    }
 
     .popup_back {
         opacity: 0;
@@ -403,7 +415,7 @@ main {
             }
         }
 
-       
+
         .X_back {
             /* position: relative; */
 
@@ -628,13 +640,14 @@ main {
 
 /* 1567px 이하 -project */
 @media screen and (max-width:1567px) {
-     .popup .X{
-            position: absolute;
-            top: calc(10vh - 38px);
-            right: calc(15vw - 38px);
-            margin: 0;
-            cursor: pointer;
-        }
+    .popup .X {
+        position: absolute;
+        top: calc(10vh - 38px);
+        right: calc(15vw - 38px);
+        margin: 0;
+        cursor: pointer;
+    }
+
     .P_list .P_thumbList {
         padding: 30px;
     }

@@ -38,7 +38,7 @@ function About() {
                             </div>
                             <div className="A_profile_note">
                                 <img className="profileIcon" src="/line-md_github.svg" alt="아이콘" />
-                                <p className="mission_note">GitHub</p>
+                                <a href="https://github.com/h87731381-droid?tab=repositories" target="_blank">GitHu</a>
                             </div>
                         </div>
                     </div>
