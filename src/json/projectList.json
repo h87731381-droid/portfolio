@@ -1,18 +1,18 @@
 [
     {
-        "id": 10,
+        "id": 0,
         "name": "영화 소개 사이트",
         "type": ["js", "jQuery"],
         "photo":"thumbnail_movie(2).jpg"
     },
     {
-        "id": 11,
+        "id": 1,
         "name": "나의 포트폴리오",
         "type": ["js", "React","SCSS"],
         "photo":"property.jpg"
     },
     {
-        "id": 12,
+        "id": 2,
         "name": "여행 계획 사이트",
         "type": ["js", "Next.js","SCSS","Zustand","NextAuth.js"],
         "photo":"planLoginAfter.jpg"
