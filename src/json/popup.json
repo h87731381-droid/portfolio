@@ -1,6 +1,6 @@
 [
   {
-    "id": "1",
+    "id": "0",
     "title": "영화 소개 사이트",
     "img": "movie.png",
     "number": "3명",
@@ -14,19 +14,19 @@
   {
     "id": "1",
     "title": "나의 포트폴리오",
-    "img": "movie.png",
+    "img": "portfoio.png",
     "number": "1명",
     "date": "2026.01.31-2026.03.09",
     "tool": ["HTML","SCSS", "JS","React","MongoDB"],
     "github": "https://github.com/h87731381-droid/portfolio",  
     "url": "https://dl-xogus.github.io/screen/",
-    "detail": "'우주'컨셉으로 일관된 저의 포트폴리오 입니다.",
+    "detail": "'우주'컨셉으로 일관된 저의 포트폴리오 입니다. 무한하게 발전할 저를 우주로 표현했습니다.",
     "role": "전체적인 디자인, 기능 구현 모두 작업했습니다."
   },
   {
-    "id": "1",
+    "id": "2",
     "title": "여행 계획 사이트",
-    "img": "movie.png",
+    "img": "trip.png",
     "number": "4명",
     "date": "2026.01.31-2026.03.09",
     "tool": ["HTML","SCSS", "JS","Zustand","Next.js","NextAuth.js","MongoDB","ImgBB"],
